@@ -14,7 +14,7 @@
 
 # Para mas referencia revisar http://es.akinator.com
 
-# Animales = perro, gato, @loro, @pollo, @tortuga, ardilla, @delfin, @puerco, @ballena, @aguila
+# Animales = perro, gato, loro, pollo, tortuga, ardilla, delfin, puerco, ballena, aguila
 
 
 def hello_and_rules
@@ -24,11 +24,14 @@ def hello_and_rules
   puts "\nResponde 'si' o 'no'"
 end
 
+def bye
+  puts "En la proxima version podras volver a responder."
+end
 def check_answer(answer)
   if answer == "si" || answer == "no"
     return true
   else 
-    puts  "Recuerda solo puedes responder 'si' o 'no'"
+    abort "Recuerda solo puedes responder 'si' o 'no'\nEntra de nuevo al juego."
   end
 end
 
